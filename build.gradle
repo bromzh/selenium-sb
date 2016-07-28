@@ -1,0 +1,33 @@
+group 'org.bmzh'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.7'
+    testCompile 'junit:junit:4.11'
+    testCompile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.53.1'
+    testCompile group: 'org.spockframework', name: 'spock-core', version: '1.0-groovy-2.4'
+    testCompile group: 'org.gebish', name: 'geb-core', version: '0.13.1'
+    testCompile group: 'org.gebish', name: 'geb-spock', version: '0.13.1'
+}
+
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.4'
+}
