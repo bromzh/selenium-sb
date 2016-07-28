@@ -9,7 +9,7 @@ waiting {
 }
 
 driver = { new RemoteWebDriver(remoteDriverUrl, DesiredCapabilities.chrome()) }
-baseUrl = "https://google.com"
+baseUrl = "http://localhost:3000"
 atCheckWaiting = true
 
 //environments {

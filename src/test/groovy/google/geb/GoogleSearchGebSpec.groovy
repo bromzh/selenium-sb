@@ -1,16 +1,8 @@
-package spock.geb
+package google.geb
 
 import geb.spock.GebSpec
 
-
 class GoogleSearchGebSpec extends GebSpec {
-    def "Go to index"() {
-        when:
-            go "/"
-        then:
-            title == "Google"
-    }
-
     def "Search #query"(String query) {
         setup:
             to GoogleSearchPage

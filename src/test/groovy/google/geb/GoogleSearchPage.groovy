@@ -1,8 +1,9 @@
-package spock.geb
+package google.geb
 
 import geb.Page
 
 class GoogleSearchPage extends Page {
+    static url = "https://google.com"
     static at = { title == "Google" }
 
     static content = {

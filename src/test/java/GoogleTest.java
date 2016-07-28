@@ -1,33 +1,31 @@
 import org.junit.*;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
+
 import static org.openqa.selenium.support.ui.ExpectedConditions.*;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.File;
 import java.net.URL;
 
 import static org.junit.Assert.*;
 
-public class BaseTest {
+public class GoogleTest {
     static WebDriver driver;
 
     @BeforeClass
     public static void connectDriver() throws Exception {
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-        BaseTest.driver = new RemoteWebDriver(
+        GoogleTest.driver = new RemoteWebDriver(
                 new URL("http://localhost:4444/wd/hub"),
                 DesiredCapabilities.chrome());
     }
 
     @AfterClass
     public static void close() {
-        BaseTest.driver.quit();
+        GoogleTest.driver.quit();
     }
 
     @Before

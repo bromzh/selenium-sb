@@ -1,4 +1,4 @@
-package spock.pure
+package google.spock
 
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver

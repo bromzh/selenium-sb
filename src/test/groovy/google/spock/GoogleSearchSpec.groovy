@@ -1,4 +1,4 @@
-package spock.pure
+package google.spock
 
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.remote.DesiredCapabilities
@@ -8,7 +8,6 @@ import spock.lang.Unroll
 //import org.openqa.selenium.support.
 import spock.lang.Shared
 import spock.lang.Specification
-
 
 class GoogleSearchSpec extends Specification {
     @Shared WebDriver driver
